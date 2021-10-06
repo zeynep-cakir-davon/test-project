@@ -33,7 +33,7 @@ cd $VERSION
 	cd ..
 	echo "Downloading process for the $FILE file in downloded_packages/$VERSION is starting now..."
 	./gh-dl-release-test-project.sh $1 $2				#$1= v3.2.XX 		#$2= su-ear.ear
-	./set-env-with-S3-DB-NAME.sh $3							#$3(S3)= sql-tek-tesis-xxx-xxx-xxx 	# I wrote 'S3' because '$' sign is not appropriate for a file name. 
+	./set-env-with-param1-DB-NAME.sh $3							#$3(S3)= sql-tek-tesis-xxx-xxx-xxx 	# I wrote 'S3' because '$' sign is not appropriate for a file name. 
 	then 
 		echo "The $FILE file downloaded in downloded_packages/$VERSION"
 		sudo cp ./downloaded_packages/$VERSION/su-ear.ear ./deployments/su-ear.ear
